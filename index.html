@@ -54,7 +54,7 @@ console.log("This file last modified  " + docMod); // generates message in javaS
     position: relative;
     top: 0;
     left: -100vw;
-    overflow-y: auto;
+    overflow-y: scroll;
     z-index: 0;
     background-color: hsl(0,0%,100%);
 }
@@ -75,7 +75,7 @@ console.log("This file last modified  " + docMod); // generates message in javaS
 		Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code. </p> </p>
  	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 		
-	<canvas id="myCanvas" width="200" height="200" style="border:3px solid #d3d3d3;"> 
+	<canvas id="myCanvas" width="200" height="150" style="border:3px solid #d3d3d3;"> 
 	<!--created a canvas element called myCanvas, dimensions are 200x200. 
 	there's also a border around the canvas, defined by the style attribute. it is a 3 pixel wide solid grey border -->
 	</canvas>
@@ -100,6 +100,8 @@ console.log("This file last modified  " + docMod); // generates message in javaS
 		</script>
 	
 	<p><button type="button" onclick="createImage()">Image</button></p>
+	
+	
 	<p><button type="button" onclick="clearCanvas()">Clear Canvas</button></p> 
 	
 
