@@ -67,7 +67,7 @@ console.log("This file last modified  " + docMod); // generates message in javaS
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>App6---HTML5-Canvas</h1>
-</div>
+</div>	
 	
 <div id="content" class="w3-container">
 	<p>Content goes here.</p>
@@ -83,10 +83,16 @@ console.log("This file last modified  " + docMod); // generates message in javaS
 	there's also a border around the canvas, defined by the style attribute. it is a 3 pixel wide solid grey border -->
 	<canvas/>
 	
-	<p><button onclick="drawRectanlge()">rectangle</button></p>
-	<p><button onclick="myName()">My Name</button></p>
-	<p><button onclick="createImage()">Image</button></p>
-	<p><button onclick="clearCanvas()">Clear Canvas</button></p>
+	<p><button type="button" onclick="drawRectanlge()">Rectangle</button></p>
+		function drawRectangle() {
+ 			var myCanvas_canvas = document.getElementById("myCanvas"); <!-- retrieveing the  canvas element called myCanvas.-->
+ 			var b_context = b_canvas.getContext("2d"); <!-- here its saying that myCanvas is a 2D canvas and not 1D or 3D-->
+ 			b_context.fillRect(50, 25, 150, 100);
+			}
+		
+	<p><button type="button" onclick="myName()">My Name</button></p>
+	<p><button type="button" onclick="createImage()">Image</button></p>
+	<p><button type="button" onclick="clearCanvas()">Clear Canvas</button></p>
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
