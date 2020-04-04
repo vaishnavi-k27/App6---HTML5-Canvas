@@ -101,7 +101,14 @@ console.log("This file last modified  " + docMod); // generates message in javaS
 		</script>
 	
 	<p><button type="button" onclick="createImage()">Image</button></p>
-	
+		<script>
+		function myCanvas() {
+  			var p = document.getElementById("myCanvas");
+  			var ptx = p.getContext("2d");
+  			var img = document.getElementById("scream");
+  			ptx.drawImage(img,10,10);
+			}
+		</script>
 	
 	<p><button type="button" onclick="clearCanvas()">Clear Canvas</button></p> 
 	
