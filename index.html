@@ -50,7 +50,7 @@ console.log("This file last modified  " + docMod); // generates message in javaS
 }
 .page {
     width: 100vw;
-    height: 100vh;
+    height: 200vh;
     position: relative;
     top: 0;
     left: -100vw;
@@ -77,40 +77,40 @@ console.log("This file last modified  " + docMod); // generates message in javaS
  	
 		
 	<canvas id="myCanvas" width="200" height="150" style="border:3px solid #d3d3d3;"> 
-	<!--created a canvas element called myCanvas, dimensions are 200x200. 
+	<!--created a canvas element called myCanvas, dimensions are 200x150. 
 	there's also a border around the canvas, defined by the style attribute. it is a 3 pixel wide solid grey border -->
 	</canvas>
 	
-	<p><button type="button" onclick="drawRectangle()">Rectangle</button></p>
-		<script>
+	<p><button type="button" onclick="drawRectangle()">Rectangle</button></p> <!-- a button is added here, identified by type = button. when clicked it will perform the function drawRectangle. the text on the button says Rectangle -->
+		<script> //starting the JavaScript part of the button so it can perform a function
 		function drawRectangle() {
- 			var myCanvas_canvas = document.getElementById("myCanvas"); // retrieveing the  canvas element called myCanvas.
- 			var myCanvas_context = myCanvas_canvas.getContext("2d"); //here its saying that myCanvas is a 2D canvas and not 1D or 3D
- 			myCanvas_context.fillRect(50, 25, 150, 100);
+ 			var canvas1 = document.getElementById("myCanvas"); // retrieveing the  canvas element called myCanvas.
+ 			var context1 = canvas1.getContext("2d"); //here its saying that myCanvas is a 2D canvas and not 1D or 3D
+ 			context1.fillRect(50, 25, 150, 100); // command to fill the rectangle, the x adn y coordiates, with the width and height
 			}
-		</script>
+		</script> 
 		
-	<p><button type="button" onclick="myName()">My Name</button></p>
-		<script>
+	<p><button type="button" onclick="myName()">My Name</button></p> <!-- a button is added here, identified by type = button. when clicked it will perform the function myName. the text on the button says My Name -->
+		<script> //starting the JavaScript part of the button so it can perform a function
 		function myName() {
- 			var c = document.getElementById("myCanvas");
-			var ctx = c.getContext("2d");
-			ctx.font = "30px Arial";
-			ctx.fillText("Vaishnavi",10,50);
+ 			var canvas2 = document.getElementById("myCanvas"); // retrieveing the  canvas element called myCanvas.
+			var context2 = canvas2.getContext("2d"); // myCanvas is a 2D element
+			context2.font = "30px Arial"; // designating the font and tihckness of the text
+			context2.fillText("Vaishnavi",10,50); //the text will be filled in using the fillText command with coordinates of text
 			}
 		</script>
 	
-	<img id="brownies" src="brownies.jpg" alt="brownies" width="177" height="113">
+	<img id="brownies" src="brownies.jpg" alt="brownies" width="100" height="75">
 	<!--<img id="cat" src="images/cat.png" alt="sleeping cat" width="177" height="113">-->
 	
-	<p><button type="button" onclick="createImage()">Image</button></p>
-		<script>
-		window.onload = createImage() {
-  			var canvas = document.getElementById("myCanvas");
- 			var context = canvas.getContext("2d");
-			var cat = document.getElementById("brownies");
-  			context.drawImage(cat, 0, 0);
-			};
+	
+		<script> //starting the JavaScript part of the button so it can perform a function
+		function createImage() {
+  			var canvas3 = document.getElementById("myCanvas"); // retrieveing the  canvas element called myCanvas.
+ 			var context3 = canvas3.getContext("2d"); // myCanvas is a 2D element
+			var img3 = document.getElementById("brownies");
+  			context3.drawImage(img3, 0, 0);
+			}
 			
 		/*function createImage() {
   			var p = document.getElementById("myCanvas");
@@ -119,6 +119,7 @@ console.log("This file last modified  " + docMod); // generates message in javaS
   			ptx.drawImage(brownies,10,10);
 			}*/
 		</script>
+	<p><button type="button" onclick="createImage()">Image</button></p>
 	
 	<p><button type="button" onclick="clearCanvas()">Clear Canvas</button></p> 
 	
