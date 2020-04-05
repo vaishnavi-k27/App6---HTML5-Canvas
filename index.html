@@ -9,7 +9,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
+Vaishnavi Kothakonda
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -19,10 +19,12 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+to do things in a canvas. like draw a rectangle, insert text, insert an image, and clear the canvas. fun stuff. 
  
 Known Issues:
-blah, blah, blah, blah
+the footer sometimes covers the last button (clear canvas) on phones. I made the header text smaller so it wouldn't and you can now press
+the button (which took a lot of trial and error to get to this point). but the button does work on all devices; but you can just see it 
+clearest on a laptop, so please run the code on a laptop for full effect. thanks :)
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -47,6 +49,7 @@ console.log("This file last modified  " + docMod); // generates message in javaS
 <style>	
 .body {
      margin: 0em;
+     height: 150vh;
 }
 .page {
     width: 100vw;
@@ -81,43 +84,46 @@ console.log("This file last modified  " + docMod); // generates message in javaS
 	there's also a border around the canvas, defined by the style attribute. it is a 3 pixel wide solid grey border -->
 	</canvas>
 	
-	<p><button type="button" onclick="drawRectangle()">Rectangle</button></p> <!-- a button is added here, identified by type = button. when clicked it will perform the function drawRectangle. the text on the button says Rectangle -->
+	<p><button type="button" onclick="drawRectangle()">Rectangle</button></p> <!-- a button is added here, identified by type = button. when clicked it will perform the function drawRectangle, which is done by the onclick command. the text on the button says Rectangle -->
 		<script> //starting the JavaScript part of the button so it can perform a function
-		function drawRectangle() {
- 			var canvas1 = document.getElementById("myCanvas"); // retrieveing the  canvas element called myCanvas.
+		function drawRectangle() { //defined here is the drawREctangle function, which will, you guessed it, draw (and fill in) a rectangle. 
+ 			var canvas1 = document.getElementById("myCanvas"); // retrieveing the canvas element called myCanvas.
  			var context1 = canvas1.getContext("2d"); //here its saying that myCanvas is a 2D canvas and not 1D or 3D
- 			context1.fillRect(50, 25, 150, 100); // command to fill the rectangle, the x adn y coordiates, with the width and height
+ 			context1.fillRect(50, 25, 150, 100); // command to fill in a 2D rectangle on the myCanvas canvas, the x and y coordiates defining where the rectangle will be on the canvas, with the width and height of the rectangle
 			}
 		</script> 
 		
-	<p><button type="button" onclick="myName()">My Name</button></p> <!-- a button is added here, identified by type = button. when clicked it will perform the function myName. the text on the button says My Name -->
+	<p><button type="button" onclick="myName()">My Name</button></p> <!-- a button is added here, identified by type = button. when clicked it will perform the function myName, which is done by the onclick command. the text on the button says My Name -->
 		<script> //starting the JavaScript part of the button so it can perform a function
-		function myName() {
+		function myName() { //here we define the myName function which will write my name on the canvas
  			var canvas2 = document.getElementById("myCanvas"); // retrieveing the  canvas element called myCanvas.
 			var context2 = canvas2.getContext("2d"); // myCanvas is a 2D element
 			context2.font = "30px Arial"; // designating the font and tihckness of the text
-			context2.fillText("Vaishnavi",10,50); //the text will be filled in using the fillText command with coordinates of text
+			context2.fillText("Vaishnavi",10,50); //the text will be filled in using the fillText command with coordinates of where the text will go on the canvas
 			}
 		</script>
 	
-	<img id="brownies" src="betterbrownies.jpg" alt="brownies" width="150" height="75" style="display:none;" >
+	<img id="brownies" src="betterbrownies.jpg" alt="brownies" width="150" height="75" style="display:none;" > <!--this identifies an image called brownies. the source of the image is the jpg
+called betterbrownies.jpg which was uploaded to this repository. if betterbrownies.jpg is not found, the word brownies will be displayed. 
+the image's dimensions are 150x75, but it doesn't matter because it is hidden by the style attribute display:none. this is just refrenced
+so the code below has the image when it is run. -->
 		
 		<script> //starting the JavaScript part of the button so it can perform a function
-		function createImage() {
-  			var canvas3 = document.getElementById("myCanvas"); // retrieveing the  canvas element called myCanvas.
+		function createImage() { //the createImage function is defined. this function will put the image identified above on the canvas
+  			var canvas3 = document.getElementById("myCanvas"); // retrieveing the canvas element called myCanvas.
  			var context3 = canvas3.getContext("2d"); // myCanvas is a 2D element
-			var img3 = document.getElementById("brownies");
-  			context3.drawImage(img3, 10, 10);
+			var img3 = document.getElementById("brownies"); //img3 is being identified as the "brownies" image from above
+  			context3.drawImage(img3, 10, 10); //img3 is drawn in 2D at its coordinates, 10 down and 10 across from the top left corner of the canvas
 			}
 		</script>
 								     
-	<p><button type="button" onclick="createImage()">Image</button></p>
+	<p><button type="button" onclick="createImage()">Image</button></p> <!-- a button is added here, identified by type = button. when clicked it will perform the function createImage, which is done by the onclick command. the text on the button says Image -->
 	
-	<p><button type="button" onclick="clearCanvas()">Clear Canvas</button></p> 
-		<script>
-		function clearCanvas() {
-			var canvas4 = document.getElementById("myCanvas");
-			canvas4.width = canvas4.width;
+	<p><button type="button" onclick="clearCanvas()">Clear Canvas</button></p> <!-- a button is added here, identified by type = button. when clicked it will perform the function clearCanvas, which is done by the onclick command. the text on the button says Clear Canvas -->
+		<script> //starting the JavaScript part of the button so it can perform a function
+		function clearCanvas() { //this function is defined as the clearCanvas function, which will clear the canvas
+			var canvas4 = document.getElementById("myCanvas"); //the myCanvas canvas is being refrenced so the syste knows which canvas to clear
+			canvas4.width = canvas4.width; //by setting the width of the canvas, the canvas is reset and brought back to its default values, effectively erasing the contents
 			}
 		</script>
 	
