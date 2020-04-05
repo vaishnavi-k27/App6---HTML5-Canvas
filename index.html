@@ -100,16 +100,14 @@ console.log("This file last modified  " + docMod); // generates message in javaS
 			}
 		</script>
 	
-	<img id="brownies" src="brownies.jpg" alt="brownies" width="10" height="5">
-	<!--<img id="cat" src="images/cat.png" alt="sleeping cat" width="177" height="113">-->
-	
-	
+	<img id="brownies" src="brownies.jpg" alt="brownies" width="150" height="75" style="display:none;>
+		
 		<script> //starting the JavaScript part of the button so it can perform a function
 		function createImage() {
   			var canvas3 = document.getElementById("myCanvas"); // retrieveing the  canvas element called myCanvas.
  			var context3 = canvas3.getContext("2d"); // myCanvas is a 2D element
-			var img3 = document.getElementById("brownies");
-  			context3.drawImage(img3, 0, 0);
+			var img3 = document.getElementById("brownies").style="display:none;
+  			context3.drawImage(img3, 0, 0, 1, 1);
 			}
 			
 		/*function createImage() {
