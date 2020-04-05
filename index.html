@@ -100,7 +100,7 @@ console.log("This file last modified  " + docMod); // generates message in javaS
 			}
 		</script>
 	
-	<img id="brownies" src="evensmallerbrownies.jpg" alt="brownies" width="150" height="75" style="display:none;" >
+	<img id="brownies" src="betterbrownies.jpg" alt="brownies" width="150" height="75" style="display:none;" >
 		
 		<script> //starting the JavaScript part of the button so it can perform a function
 		function createImage() {
@@ -113,18 +113,15 @@ console.log("This file last modified  " + docMod); // generates message in javaS
 								     
 	<p><button type="button" onclick="createImage()">Image</button></p>
 	
+	<script>
+	function clearCanvas() {
+	var canvas4 = document.getElementById("myCanvas");
+	canvas4.width = canvas4.width;
+	</script>
+	
 	<p><button type="button" onclick="clearCanvas()">Clear Canvas</button></p> 
 	
 
-
-	<script>
-	/* var c = document.getElementById("myCanvas");
-	var ctx = c.getContext("2d");
-	ctx.font = "30px Arial";
-	ctx.fillText("Hello World",10,50); */
-	</script> 
-
-	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
